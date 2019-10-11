@@ -1,6 +1,16 @@
-.botaoAdicionar{
+.botaoPrincipal{
     display: block;
     margin: 20px;
+}
+
+.navMenu{
+    color: #9A9DA0;
+    padding: 8px;
+}
+
+.navMenu:hover{
+    color: #ffffffce;
+    text-decoration: none;
 }
 
 .view{

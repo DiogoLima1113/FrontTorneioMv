@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import NavBarTorneio from './Components/NavBar';
+import NavBar from './Components/NavBar';
 import Jogos from './Jogos';
+import Jogadores from './Jogadores';
+import Times from './Times'
+import { BrowserRouter, Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <NavBarTorneio />
 
-      <Jogos />
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <NavBar />
+          <Route exact path='/' component={ Jogos } />
+          <Route path='/jogadores' component={ Jogadores } />
+          <Route path='/times' component={ Times } />
+        </div>
+      </BrowserRouter>
 
-    </div>
-  );
+    );
+  }
 }
 
 export default App;
